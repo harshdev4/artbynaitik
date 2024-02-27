@@ -31,6 +31,10 @@ nav{
 }
 
 nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px 0;
     list-style: none;
     padding-right: 4%;
@@ -47,7 +51,7 @@ nav a{
     color: rgb(104, 103, 103);
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1rem;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
 }
@@ -245,6 +249,7 @@ nav a:hover{
 
     nav ul{
         display: flex;
+        flex-direction: row;
         margin-right: 20px;
     }
 
@@ -283,5 +288,9 @@ nav a:hover{
     .contact p{
         font-size: 40px;
         width: 50%;
+    }
+
+    .nav-toggle-label-close{
+        display: none;
     }
 }

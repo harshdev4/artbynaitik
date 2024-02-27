@@ -31,6 +31,10 @@ nav{
 }
 
 nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px 0;
     list-style: none;
     padding-right: 4%;
@@ -47,7 +51,7 @@ nav a{
     color: rgb(104, 103, 103);
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1rem;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
 }
@@ -155,12 +159,17 @@ nav a:hover{
     margin-top: 50px;
     padding: 0 20px;
 }
-.about h2{
-    font-size: 20px;
-    font-weight: 100;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.about p{
+    font-size: 18px;
     letter-spacing: 0.8px;
-    line-height: 180%;
+    line-height: 160%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+      color: rgb(61, 60, 60);
 }
 
 .about img{
@@ -223,6 +232,7 @@ nav a:hover{
 
     nav ul{
         display: flex;
+        flex-direction: row;
         margin-right: 20px;
     }
 
@@ -251,7 +261,7 @@ nav a:hover{
         gap:30px;
     }
 
-    .about h2{
+    .about p{
         width: 78%;
         font-size: 25px;
     }
@@ -259,5 +269,9 @@ nav a:hover{
     .about img{
         width: 200px;
         background-color: rgba(128, 128, 128, 0.274);
+    }
+
+    .nav-toggle-label-close{
+        display: none;
     }
 }
