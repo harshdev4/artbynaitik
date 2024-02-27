@@ -156,9 +156,12 @@ nav a:hover{
 }
 
 .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
     margin-top: 50px;
     padding: 0 20px;
-    min-height:60vh;
 }
 .about p{
     font-size: 18px;
@@ -174,8 +177,10 @@ nav a:hover{
 }
 
 .about img{
-    width: 100px;
-    float: left;
+    width: 130px;
+    border: 5px solid;
+    border-radius: 50%;
+    border-color: #cbf6ff #e5daff #ffdada #fff7d4;
 }
 
 .footer{
@@ -253,13 +258,6 @@ nav a:hover{
 
     .heading{
         font-size: 30px;
-    }
-
-    .about{
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: flex-start;
-        gap:30px;
     }
 
     .about p{
