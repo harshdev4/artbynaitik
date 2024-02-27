@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background1 : rgba(0,0,0,0.5);
+    --background2 : rgb(255, 255, 255);
+}
+
+header{
+    background: var(--background2);
+    position: fixed;
+    width: 100%;
+    /* padding: 0.1% 0; */
+    z-index: 999;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+nav{
+    position: absolute;
+    text-align: right;
+    top:100%;
+    right: 0;
+    background: var(--background2);
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 250ms ease-in-out;
+}
+
+nav ul{
+    padding: 20px 0;
+    list-style: none;
+    padding-right: 4%;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+    cursor:pointer;
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(104, 103, 103);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover{
+    color:rgb(255, 115, 0);
+}
+
+.check-toggle{
+     display: none;
+}
+
+.check-toggle:checked ~ nav{
+    transform: scale(1,1);
+    transition: transform 400ms ease-in-out;
+}
+
+.check-toggle:checked ~ nav a{
+    transition: opacity 250ms ease-in-out 0.25s;
+    opacity: 1;
+}
+
+.check-toggle:checked ~ .nav-toggle-label{
+    display: none;
+}
+
+.check-toggle:checked ~ .nav-toggle-label-close{
+    opacity: 1;
+    transform: scale(1,1);
+    transition: all 0.4s ease-in-out;
+}
+.nav-toggle-label{
+    position: absolute;
+    top:0;
+    right: 4%;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    cursor: pointer;
+}
+
+.nav-toggle-label span,.nav-toggle-label span::before,.nav-toggle-label span::after{
+    display: block;
+    width:2.5em;
+    background: rgb(104, 103, 103);
+    height: 3px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,.nav-toggle-label span::after{
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom:7px;
+}
+
+.nav-toggle-label span::after{
+    top:7px;
+}
+
+.nav-toggle-label-close{
+    position: absolute;
+    top:0;
+    right: 4%;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    opacity: 0;
+    transform: scale(1,0);
+    cursor: pointer;
+}
+.nav-toggle-label-close span,.nav-toggle-label-close span::before{
+    display: block;
+    width: 2.5em;
+    background: rgb(104, 103, 103);
+    height: 3px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label-close span{
+    transform: rotate(155deg);
+}
+
+.nav-toggle-label-close span::before{
+    content: '';
+    transform: rotate(45deg);
+}
+
+.dummy{
+    height: 50px;
+}
+
+.sms p{
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 30px;
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1), 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+    background-color: rgba(214, 210, 210, 0.1);
+    text-align: center;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+}
+
+.contact p{
+    color:rgb(0 0 0 / 85%);
+    font-size: 15px;
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1), 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 10px 20px;
+    font-family: "Roboto";
+    text-align: center;
+    line-height: 150%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contactlinks{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 60px auto;
+    row-gap: 45px;
+    padding: 30px;
+    align-items: center;
+    font-size: 12px;
+}
+
+.contactlinks img{
+    width: 30px;
+    border-radius: 2rem;
+}
+
+.contactlinks a{
+    color:rgb(226, 104, 4);
+}
+
+.footer{
+    padding: 5%;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 5%;
+    box-shadow: 0 4px 15px -0.5px rgba(0, 0, 0, 0.06) inset;
+}
+
+.footer ion-icon{
+    padding:3%;
+
+}
+
+.insta{
+    color:rgb(247, 109, 109);
+    font-weight: bold;
+}
+
+.youtube{
+    color:rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+.twitter{
+    font-weight: bold;
+}
+
+.footer h3{
+    text-align: center;
+    font-size: 15px;
+    font-family:'Dancing Script';
+}
+
+@media screen and (min-width:850px) {
+
+    .nav-toggle-label{
+        display: none;
+    }
+
+    header{
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .logo{
+       width: 141px;
+    }
+
+    nav{
+        all: unset;
+    }
+
+    nav ul{
+        display: flex;
+        margin-right: 20px;
+    }
+
+    nav ul li{
+        padding: 0 8px;
+    }
+
+    nav a{
+        opacity: 1;
+        font-size: 1.3rem;
+        font-weight: lighter;
+    }
+
+    .dummy{
+        height: 92px;
+    }
+
+    .sms{
+        font-size: 35px;
+    }
+
+    .contactlinks{
+        font-size: 25px;
+        column-gap: 30px;
+        row-gap: 60px;
+    }
+
+    .contactlinks img{
+        width: 65px;
+    }
+
+    .contact{
+        justify-content: space-around;
+    }
+
+    .contact p{
+        font-size: 40px;
+        width: 50%;
+    }
+}
