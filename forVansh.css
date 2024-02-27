@@ -171,6 +171,8 @@ nav a:hover{
     border-radius: 110px;
     background-color: rgb(104, 103, 103);
     overflow: hidden;
+    border: 3px solid;
+    border-color: #cbf6ff #e5daff #ffdada #fff7d4;
 }
 
 .circle .vansh{
