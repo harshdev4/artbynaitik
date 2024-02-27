@@ -164,7 +164,7 @@ nav a:hover{
 }
 
 .Blogheading{
-    font-size: 30px;
+    font-size: 28px;
     padding: 20px 25px;
     margin-top: 3%;
 }
@@ -192,6 +192,7 @@ nav a:hover{
     align-self: center;
 }
 a{
+    font-size:16px;
     text-decoration: none;
 }
 
